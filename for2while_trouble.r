@@ -1,20 +1,3 @@
-# i have a nice for loop it works
-for(i in 1:nsim) {
-  print(i)
-}
-
-# now I make it a while loop for some other reason
-while(i <= nsim) {
-  print(i)
-}
-
-# oops why is the computer hanging?
-
-
-
-###
-
-
 # the for iterator range is not re-eval'd
 # say i want to do something stupid like
 # insert missing numbers (in order) to x
