@@ -16,3 +16,6 @@ a <- c(1, 3)
 b <- c(3, 1)
 dese <- (b-1)*nrow(mat) + a
 mat[dese] <- mat[dese] + 1
+
+# or you can use cbind
+mat[cbind(a, b)] <- mat[cbind(a, b)] + 1
