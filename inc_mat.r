@@ -11,7 +11,7 @@ mat[a, b] <- mat[a, b] + 1
 
 # but this is bad because you also incrememnt 1 and 3 on the diag
 
-# so instead can do
+# if you remember C you might do this
 a <- c(1, 3)
 b <- c(3, 1)
 dese <- (b-1)*nrow(mat) + a
