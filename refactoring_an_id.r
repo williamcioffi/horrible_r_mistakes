@@ -41,7 +41,7 @@ order(tapply(sight_df$x, sight_df$newid, mean))
 
 
 ###
-### an alternative using ave -- what's that even do?
+### an alternative using ave() -- what's that even do?
 ###
 
 # bonus you can use aggregate instead of tapply to do this
