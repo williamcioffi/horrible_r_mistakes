@@ -37,3 +37,27 @@ order(tapply(sight_df$x, sight_df$newid, mean))
 # [1]  1  2  3  4  5  6  7  8  9 10
 
 # ok!
+
+
+
+###
+### an alternative using ave -- what's that even do?
+###
+
+# bonus you can use aggregate instead of tapply to do this
+meanx <- aggregate(x ~ id, sight_df, mean)
+
+# match and copy it back in
+sight_df$meanx <- mean_x$x[match(sight_df$id, meanx$id)]
+
+# reorder (once this time)
+sight_df <- sight_df[order(sight_df$meanx),]
+
+sight_df$newid <- as.numeric(ave(
+    paste(sight_df$meanx, sight_df$id),
+    rep(1, nrow(sight_df)), # grouping variable all one group in this case
+    FUN = function(x) match(x, unique(x))
+))
+
+#check your work
+order(tapply(sight_df$x, sight_df$newid, mean))
