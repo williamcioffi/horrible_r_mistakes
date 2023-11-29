@@ -53,4 +53,4 @@ dat3 == dat1[1:2, ]
 
 # works!
 
-# don't talk to be about tibbles, I don't want to hear it.
+# don't talk to me about tibbles, I don't want to hear it.
